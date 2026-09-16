@@ -1,0 +1,49 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition duration-200;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-2 bg-socratic-600 hover:bg-socratic-700 text-white rounded-lg font-medium transition duration-200;
+  }
+
+  .card {
+    @apply bg-socratic-800 border border-socratic-700 rounded-lg p-6 shadow-lg hover:shadow-xl transition;
+  }
+
+  .question-box {
+    @apply bg-gradient-to-r from-socratic-700 to-socratic-800 border-l-4 border-blue-500 rounded-lg p-6 shadow-lg;
+  }
+
+  .answer-box {
+    @apply bg-socratic-750 rounded-lg p-4 border border-socratic-600;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+}
